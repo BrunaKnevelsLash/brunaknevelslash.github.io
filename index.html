@@ -1,0 +1,181 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Bruna Knevels Lash Designer em Jaraguá do Sul. Extensão de cílios, manutenção, lash lifting, sobrancelhas, dermaplaning e limpeza de pele." />
+  <title>Bruna Knevels Lash Designer</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root{
+      --bg:#fbf7f3;
+      --paper:#fffdfa;
+      --ink:#2f2926;
+      --muted:#756d68;
+      --accent:#a77b68;
+      --accent-dark:#7c5748;
+      --line:#eadfd8;
+      --soft:#f4ece7;
+      --shadow:0 20px 50px rgba(72,48,38,.10);
+      --radius:22px;
+    }
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body{margin:0;font-family:'DM Sans',sans-serif;background:var(--bg);color:var(--ink);line-height:1.6}
+    a{text-decoration:none;color:inherit}
+    img{display:block;max-width:100%}
+    .wrap{width:min(1120px,calc(100% - 36px));margin:auto}
+    header{position:sticky;top:0;z-index:20;background:rgba(251,247,243,.9);backdrop-filter:blur(12px);border-bottom:1px solid rgba(234,223,216,.85)}
+    nav{height:72px;display:flex;align-items:center;justify-content:space-between;gap:20px}
+    .brand{font-family:'Playfair Display',serif;font-size:1.3rem;font-weight:700}
+    .brand span{color:var(--accent-dark)}
+    .navlinks{display:flex;gap:22px;font-size:.93rem;color:var(--muted)}
+    .navbtn{padding:11px 17px;border-radius:999px;background:var(--ink);color:white;font-weight:600}
+    .hero{padding:72px 0 54px}
+    .hero-grid{display:grid;grid-template-columns:1.03fr .97fr;gap:46px;align-items:center}
+    .eyebrow{display:inline-flex;align-items:center;gap:8px;padding:8px 12px;border-radius:999px;background:var(--soft);color:var(--accent-dark);font-size:.82rem;font-weight:700;letter-spacing:.02em}
+    h1,h2,h3{font-family:'Playfair Display',serif;line-height:1.08;margin:0}
+    h1{font-size:clamp(3rem,6vw,5.6rem);letter-spacing:-.04em;margin-top:20px}
+    .hero p{font-size:1.12rem;color:var(--muted);max-width:620px;margin:22px 0 28px}
+    .actions{display:flex;flex-wrap:wrap;gap:12px}
+    .btn{display:inline-flex;align-items:center;justify-content:center;padding:14px 20px;border-radius:999px;font-weight:700;border:1px solid var(--ink);transition:.2s}
+    .btn.primary{background:var(--ink);color:#fff}.btn.primary:hover{transform:translateY(-2px)}
+    .btn.ghost{background:transparent}.btn.ghost:hover{background:#fff}
+    .hero-photo{position:relative}
+    .hero-photo img{width:100%;height:620px;object-fit:cover;border-radius:36px;box-shadow:var(--shadow)}
+    .float-card{position:absolute;left:-26px;bottom:28px;background:rgba(255,253,250,.96);border:1px solid var(--line);padding:18px 20px;border-radius:18px;box-shadow:var(--shadow)}
+    .float-card strong{display:block;font-size:1.45rem}
+    .float-card span{color:var(--muted);font-size:.9rem}
+    section{padding:78px 0}
+    .section-head{display:flex;justify-content:space-between;gap:30px;align-items:end;margin-bottom:34px}
+    .section-head h2{font-size:clamp(2.2rem,4vw,3.8rem);letter-spacing:-.03em}
+    .section-head p{max-width:520px;color:var(--muted);margin:0}
+    .services{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+    .card{background:var(--paper);border:1px solid var(--line);border-radius:var(--radius);padding:26px;box-shadow:0 10px 30px rgba(72,48,38,.04)}
+    .card h3{font-size:1.45rem;margin-bottom:10px}
+    .card p{margin:0;color:var(--muted)}
+    .tag{display:inline-block;margin-top:16px;padding:7px 10px;border-radius:999px;background:var(--soft);color:var(--accent-dark);font-size:.82rem;font-weight:700}
+    .prices{display:grid;grid-template-columns:repeat(2,1fr);gap:18px}
+    .price{background:var(--paper);border:1px solid var(--line);border-radius:var(--radius);padding:30px}
+    .price .amount{font-size:2.7rem;font-family:'Playfair Display',serif;margin:10px 0 5px}.price small{color:var(--muted)}
+    .gallery{columns:3 280px;column-gap:14px}
+    .gallery figure{break-inside:avoid;margin:0 0 14px;overflow:hidden;border-radius:18px;background:#eee}
+    .gallery img{width:100%;height:auto;transition:transform .35s ease}.gallery img:hover{transform:scale(1.025)}
+    .about{display:grid;grid-template-columns:.9fr 1.1fr;gap:42px;align-items:center}
+    .about img{height:560px;width:100%;object-fit:cover;border-radius:30px}
+    .about h2{font-size:clamp(2.2rem,4vw,3.8rem);margin-bottom:18px}.about p{color:var(--muted);font-size:1.06rem}
+    .facts{display:grid;grid-template-columns:repeat(2,1fr);gap:12px;margin-top:24px}.fact{background:var(--paper);border:1px solid var(--line);padding:18px;border-radius:16px}.fact strong{display:block;font-size:1.35rem}
+    .cta{background:var(--ink);color:white;border-radius:34px;padding:48px;display:grid;grid-template-columns:1fr auto;gap:28px;align-items:center}.cta h2{font-size:clamp(2.2rem,4vw,3.6rem)}.cta p{color:#ded6d0;max-width:620px}.cta .btn{background:white;color:var(--ink);border-color:white}
+    footer{padding:34px 0 48px;color:var(--muted);font-size:.92rem}.footerrow{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap}
+    @media(max-width:900px){.navlinks{display:none}.hero-grid,.about{grid-template-columns:1fr}.hero{padding-top:44px}.hero-photo img{height:520px}.float-card{left:14px}.services{grid-template-columns:1fr 1fr}.cta{grid-template-columns:1fr}.section-head{display:block}.section-head p{margin-top:14px}.about img{height:480px}}
+    @media(max-width:620px){.wrap{width:min(100% - 24px,1120px)}nav{height:64px}.brand{font-size:1.08rem}.navbtn{padding:9px 13px;font-size:.86rem}h1{font-size:3.2rem}.hero-photo img{height:430px;border-radius:26px}.services,.prices,.facts{grid-template-columns:1fr}.card,.price{padding:22px}.cta{padding:30px 24px;border-radius:26px}section{padding:58px 0}.gallery{columns:2 145px}.about img{height:410px}}
+  </style>
+</head>
+<body>
+<header>
+  <div class="wrap"><nav>
+    <a class="brand" href="#inicio">Bruna Knevels <span>Lash</span></a>
+    <div class="navlinks">
+      <a href="#servicos">Serviços</a><a href="#portfolio">Portfólio</a><a href="#precos">Preços</a><a href="#contato">Contato</a>
+    </div>
+    <a class="navbtn" href="https://wa.me/5549988823434?text=Olá%20Bruna!%20Vim%20pelo%20seu%20site%20e%20gostaria%20de%20agendar%20um%20horário." target="_blank" rel="noopener">Agendar horário</a>
+  </nav></div>
+</header>
+
+<main id="inicio">
+  <section class="hero">
+    <div class="wrap hero-grid">
+      <div>
+        <span class="eyebrow">✨ Lash Designer • Jaraguá do Sul</span>
+        <h1>Sua autoestima em primeiro lugar.</h1>
+        <p>Realce seu olhar com um atendimento feito com cuidado, técnica e personalidade. Já são <strong>mais de 200 transformações de olhares</strong>.</p>
+        <div class="actions">
+          <a class="btn primary" href="https://wa.me/5549988823434?text=Olá%20Bruna!%20Vim%20pelo%20seu%20site%20e%20gostaria%20de%20agendar%20um%20horário." target="_blank" rel="noopener">Agendar pelo WhatsApp</a>
+          <a class="btn ghost" href="#portfolio">Ver trabalhos</a>
+        </div>
+      </div>
+      <div class="hero-photo">
+        <img src="assets/work-02.jpg" alt="Trabalho de extensão de cílios realizado por Bruna Knevels" />
+        <div class="float-card"><strong>200+</strong><span>transformações de olhares</span></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="servicos">
+    <div class="wrap">
+      <div class="section-head"><div><span class="eyebrow">SERVIÇOS</span><h2>Beleza feita para você.</h2></div><p>Procedimentos pensados para valorizar seus traços e deixar sua rotina de beleza mais prática.</p></div>
+      <div class="services">
+        <article class="card"><h3>Extensão de cílios</h3><p>Aplicação personalizada para realçar o olhar com acabamento delicado, marcante ou natural.</p><span class="tag">R$ 150</span></article>
+        <article class="card"><h3>Manutenção</h3><p>Manutenção para preservar o efeito, o alinhamento e a beleza da extensão por mais tempo.</p><span class="tag">R$ 75 a R$ 130</span></article>
+        <article class="card"><h3>Remoção</h3><p>Remoção cuidadosa da extensão para preservar os fios naturais.</p><span class="tag">Consulte o valor</span></article>
+        <article class="card"><h3>Lash lifting</h3><p>Curvatura e definição dos cílios naturais para um efeito elegante e leve.</p><span class="tag">Consulte o valor</span></article>
+        <article class="card"><h3>Design de sobrancelha</h3><p>Design pensado para harmonizar o formato das sobrancelhas com o seu rosto.</p><span class="tag">Consulte o valor</span></article>
+        <article class="card"><h3>Pele</h3><p>Dermaplaning e limpeza de pele para cuidado, renovação e sensação de pele bem tratada.</p><span class="tag">Consulte o valor</span></article>
+      </div>
+    </div>
+  </section>
+
+  <section id="portfolio">
+    <div class="wrap">
+      <div class="section-head"><div><span class="eyebrow">PORTFÓLIO</span><h2>Resultados que falam por si.</h2></div><p>Uma seleção de trabalhos realizados, com diferentes estilos e propostas para valorizar cada olhar.</p></div>
+      <div class="gallery">
+        <figure><img src="assets/work-01.jpg" alt="Cílios naturais e definidos" loading="lazy"></figure>
+        <figure><img src="assets/work-03.jpg" alt="Extensão de cílios" loading="lazy"></figure>
+        <figure><img src="assets/work-04.jpg" alt="Resultado de extensão de cílios" loading="lazy"></figure>
+        <figure><img src="assets/work-05.jpg" alt="Olhar com extensão de cílios" loading="lazy"></figure>
+        <figure><img src="assets/work-06.jpg" alt="Cílios com volume e definição" loading="lazy"></figure>
+        <figure><img src="assets/work-07.jpg" alt="Extensão de cílios em cliente" loading="lazy"></figure>
+        <figure><img src="assets/work-08.jpg" alt="Resultado em cliente" loading="lazy"></figure>
+        <figure><img src="assets/work-09.jpg" alt="Trabalho de beleza realizado por Bruna Knevels" loading="lazy"></figure>
+        <figure><img src="assets/work-10.jpg" alt="Resultado de procedimento de beleza" loading="lazy"></figure>
+        <figure><img src="assets/work-11.jpg" alt="Cliente após atendimento" loading="lazy"></figure>
+      </div>
+    </div>
+  </section>
+
+  <section id="precos">
+    <div class="wrap">
+      <div class="section-head"><div><span class="eyebrow">VALORES</span><h2>Preços claros, cuidado completo.</h2></div><p>Os valores podem variar conforme a necessidade do procedimento. Para os demais serviços, consulte diretamente pelo WhatsApp.</p></div>
+      <div class="prices">
+        <div class="price"><h3>Extensão de cílios</h3><div class="amount">R$ 150</div><small>Aplicação completa</small></div>
+        <div class="price"><h3>Manutenção</h3><div class="amount">R$ 75–130</div><small>Conforme o tipo de manutenção</small></div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="wrap about">
+      <img src="assets/work-12.jpg" alt="Atendimento de beleza" loading="lazy">
+      <div>
+        <span class="eyebrow">SOBRE O ATENDIMENTO</span>
+        <h2>Um momento para você se sentir ainda mais bonita.</h2>
+        <p>O atendimento é feito com atenção aos detalhes, respeitando o estilo de cada cliente e buscando um resultado que valorize sua beleza de forma harmônica.</p>
+        <div class="facts">
+          <div class="fact"><strong>200+</strong><span>olhares transformados</span></div>
+          <div class="fact"><strong>Jaraguá do Sul</strong><span>Bairro Amizade</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="contato">
+    <div class="wrap">
+      <div class="cta">
+        <div><h2>Pronta para transformar seu olhar?</h2><p>Atendimento em Jaraguá do Sul, Bairro Amizade — Rua 13 de Maio. Fale diretamente com a Bruna e consulte os horários disponíveis.</p></div>
+        <a class="btn" href="https://wa.me/5549988823434?text=Olá%20Bruna!%20Vim%20pelo%20seu%20site%20e%20gostaria%20de%20agendar%20um%20horário." target="_blank" rel="noopener">Chamar no WhatsApp</a>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap footerrow">
+    <div>© <span id="year"></span> Bruna Knevels Lash Designer</div>
+    <div><a href="https://www.instagram.com/brunaknevels.lash/" target="_blank" rel="noopener">@brunaknevels.lash</a> · Jaraguá do Sul/SC</div>
+  </div>
+</footer>
+<script>document.getElementById('year').textContent=new Date().getFullYear()</script>
+</body>
+</html>
